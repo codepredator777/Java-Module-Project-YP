@@ -9,9 +9,8 @@ public class Main {
 
     public static void startRace() {
         System.out.println("Начнем гонку!");
-        ArrayList<Car> riders = new ArrayList<>();
-        Wheel newWheel = new Wheel();
 
+        Wheel newWheel = new Wheel();
         Scanner scanner = new Scanner(System.in);
 
         String riderName = "";
@@ -22,21 +21,17 @@ public class Main {
                 System.out.println("Введите название автомобиля");
                 riderName = scanner.next();
             }
-            System.out.println("Введите скорость автомобиля");
-            while (riderSpeed <= 0 || riderSpeed >= 250) {
 
-                    riderSpeed = scanner.nextInt();
+            while (riderSpeed <= 0 || riderSpeed >= 250) {
+                System.out.println("Введите скорость автомобиля");
+                riderSpeed = scanner.nextInt();
 
                 if (riderSpeed < 0) {
                     System.out.println("В заезде не учавствуют автомобили со скоростью 0 или меньше");
                 } else if (riderSpeed > 250) {
                     System.out.println("Мы не принимаем автомобили быстрее 250 км");
                 } else {
-                    System.out.println(String.format("автомобиль %s принят", riderName));
-                    System.out.println("-----------------------------------");
-                    riders.add(new Car(riderName, riderSpeed));
-
-                    riders.add(acceptRider(riderName, riderSpeed));
+                    newWheel.racers.add(acceptRider(riderName, riderSpeed));
                     riderName = "";
                     riderSpeed = 0;
                     break;
@@ -44,9 +39,7 @@ public class Main {
             }
         }
 
-
-
-        newWheel.checkWhoWinnerFrom(riders);
+        newWheel.checkWhoWinnerFrom();
     }
 
 

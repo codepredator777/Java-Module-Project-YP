@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 
 public class Wheel {
-    ArrayList<Car> racers;
+    ArrayList<Car> racers = new ArrayList<>();
 
-    public void checkWhoWinnerFrom(ArrayList<Car> racers) {
+    public void checkWhoWinnerFrom() {
         Car winner;
 
-        if (!(racers.isEmpty())) {
-            winner = racers.get(0);
+        if (!(this.racers.isEmpty())) {
+            winner = this.racers.get(0);
 
             for(Car challenger : racers) {
                 if (CalculateDistance(challenger.speed) > CalculateDistance(winner.speed)) {
