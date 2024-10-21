@@ -46,5 +46,4 @@ public class Main {
         System.out.println("-----------------------------------");
         return new Car(name, speed);
     }
-
 }

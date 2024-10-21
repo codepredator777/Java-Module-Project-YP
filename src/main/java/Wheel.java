@@ -19,7 +19,6 @@ public class Wheel {
             System.out.println("Ошибка при расчете победителя");
         }
 
-
     }
 
     public static Integer CalculateDistance(Integer speed) {
