@@ -6,5 +6,4 @@ public class Car {
         this.name = name;
         this.speed = speed;
     }
-
 }

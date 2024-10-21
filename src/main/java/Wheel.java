@@ -15,7 +15,6 @@ public class Wheel {
                 }
             }
             System.out.println(String.format("%s оказалась самой быстрой машиной", winner.name));
-            return;
         } else {
             System.out.println("Ошибка при расчете победителя");
         }
