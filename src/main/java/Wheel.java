@@ -9,8 +9,8 @@ public class Wheel {
         if (!(this.racers.isEmpty())) {
             winner = this.racers.get(0);
 
-            for(Car challenger : racers) {
-                if (CalculateDistance(challenger.speed) > CalculateDistance(winner.speed)) {
+            for (Car challenger : racers) {
+                if (calculateDistance(challenger.speed) > calculateDistance(winner.speed)) {
                     winner = challenger;
                 }
             }
@@ -18,12 +18,9 @@ public class Wheel {
         } else {
             System.out.println("Ошибка при расчете победителя");
         }
-
-
     }
 
-    public static Integer CalculateDistance(Integer speed) {
+    public static int calculateDistance(int speed) {
         return speed * 24;
     }
-
 }
